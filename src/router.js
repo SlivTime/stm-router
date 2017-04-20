@@ -33,7 +33,7 @@ var $ = require('jquery');
  * `from`, `shouldNavigate` and `state` (for future uses) arguments.
  * @see handlerCallback documentation for details.
  */
-class Router{
+export class Router{
     constructor(options) {
         this.options = options || {};
         this.handlers = [];
@@ -237,7 +237,6 @@ class Router{
 
         // We should stop previous loading if new request accepted
         if (this._xhr) {
-            if (options.state && 
             if (options.state &&
                 options.state.contentView == this._xhr.url &&
                 options.state.readerView == url) {
@@ -423,6 +422,3 @@ class Router{
         form.submit();
     }
 }
-
-export default Router;
-

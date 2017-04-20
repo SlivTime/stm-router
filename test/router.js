@@ -1,5 +1,5 @@
 require('core-js');
-var Router = require('../lib/router').default;
+var Router = require('../lib/router').Router;
 var assert = require('chai').assert;
 
 var normalizeTestCases = [
